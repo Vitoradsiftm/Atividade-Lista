@@ -1,0 +1,17 @@
+def selection_sort_otimizado(lista):
+    n = len(lista)
+    iteracoes = 0
+    for i in range(n - 1):
+        index = i
+        houve_troca = False
+        for j in range(i + 1, n):
+            iteracoes += 1
+            if lista[j] < lista[index]:
+                index = j
+        if index != i:
+            lista[i], lista[index] = lista[index], lista[i]
+            houve_troca = True
+        print(f"Iteração {i+1}: {lista}")
+        if not houve_troca:
+            break
+    return iteracoes
