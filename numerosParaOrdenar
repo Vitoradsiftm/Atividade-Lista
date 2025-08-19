@@ -1,0 +1,13 @@
+import random
+from selectionSorte import selectionSorte
+from bubbleSorte import bubble_sort
+
+
+qualquer_um = random.sample (range (1,1000),5)
+invertido = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+if __name__ == "__main__":
+    lista = qualquer_um
+    print("Antes:", lista)
+    selectionSorte(lista)  
+    print("Depois:", lista)
