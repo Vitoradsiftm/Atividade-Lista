@@ -1,0 +1,9 @@
+def selectionSorte(lista):
+    n = len(lista)
+    for i in range(n - 1):
+        index = i
+        for j in range(i + 1, n):
+            if lista[j] < lista[index]:
+                index = j
+        if index != i:
+            lista[i], lista[index] = lista[index], lista[i]
